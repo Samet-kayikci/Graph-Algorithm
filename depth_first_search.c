@@ -10,7 +10,7 @@ node *list[7];
 int count_array[7] = {5,1,9,2,10,3,8};
 
 
-void depth_first_search(node *root, node *search){
+void depth_first_search(node *root){
 
 node *stack[7] = {NULL};
 node *visited[7] = {NULL};
@@ -53,12 +53,7 @@ while (visited[6] == NULL || stack[0] != NULL){
         
     }
     j = 0;
-  if(search != NULL){
-    if(root < search)
-        printf("%d", visited[a] -> data);
-    else
-        return;
-  }
+
 a++;    
 }
 
@@ -114,8 +109,7 @@ int main(){
 
         print(list[4]);
         printf("\n");
-        node *full = NULL;
-        depth_first_search(list[0],full);
+        depth_first_search(list[0]);
 
     return 0;
 }
