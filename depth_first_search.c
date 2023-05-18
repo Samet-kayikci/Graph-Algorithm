@@ -53,7 +53,7 @@ while (visited[6] == NULL || stack[0] != NULL){
         
     }
     j = 0;
-  if(search != -1){
+  if(search != NULL){
     if(root < search)
         printf("%d", visited[a] -> data);
     else
@@ -114,7 +114,7 @@ int main(){
 
         print(list[4]);
         printf("\n");
-        node *full = -1;
+        node *full = NULL;
         depth_first_search(list[0],full);
 
     return 0;
